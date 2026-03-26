@@ -1,3 +1,7 @@
+## 🧠 Mapa Mental do Projeto
+
+![Mapa Mental](/mapa-mental.png)
+
 📌 Leitor de Temperatura com Raspberry Pi
 
 Este projeto tem como objetivo realizar a leitura de temperatura utilizando uma Raspberry Pi e um sensor conectado a ela.
