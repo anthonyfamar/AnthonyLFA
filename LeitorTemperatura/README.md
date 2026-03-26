@@ -1,6 +1,6 @@
 ## 🧠 Mapa Mental do Projeto
 
-![Mapa Mental](/mapa-mental.png)
+![Mapa Mental](LeitorTemperatura/MapaMental.png)
 
 📌 Leitor de Temperatura com Raspberry Pi
 
