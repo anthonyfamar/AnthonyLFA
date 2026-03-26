@@ -13,8 +13,11 @@ A proposta é ser uma solução simples e prática, ideal para quem deseja inici
 🚀 O que o projeto faz
 
 • Realiza a leitura da temperatura automaticamente
+
 • Exibe os valores em tempo real
+
 • Funciona diretamente na Raspberry Pi
+
 • Não depende de ferramentas complexas
 
 🎯 Objetivo
