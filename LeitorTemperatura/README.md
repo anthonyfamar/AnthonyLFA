@@ -2,27 +2,23 @@
 
 ![Mapa Mental](MapaMental.png)
 
-📌 Leitor de Temperatura com Raspberry Pi
-
+📌 Leitor de Temperatura com Raspberry Pi<br>
 Este projeto tem como objetivo realizar a leitura de temperatura utilizando uma Raspberry Pi e um sensor conectado a ela.
 
 A aplicação foi desenvolvida em C# e funciona de forma contínua, capturando a temperatura do ambiente em intervalos de tempo e exibindo os valores diretamente no console.
 
 A proposta é ser uma solução simples e prática, ideal para quem deseja iniciar projetos com automação, monitoramento ou Internet das Coisas (IoT).
 
-🚀 O que o projeto faz
-
+🚀 O que o projeto faz<br>
 • Realiza a leitura da temperatura automaticamente<br>
 • Exibe os valores em tempo real<br>
 • Funciona diretamente na Raspberry Pi<br>
 • Não depende de ferramentas complexas
 
-🎯 Objetivo
-
+🎯 Objetivo<br>
 Demonstrar de forma simples como integrar hardware (sensor de temperatura) com software em C#, criando uma base para projetos maiores como monitoramento remoto, automação residencial ou controle de ambientes.
 
-⚙️ Como funciona
-
+⚙️ Como funciona<br>
 O projeto utiliza um sensor de temperatura conectado à Raspberry Pi, que é responsável por medir a temperatura do ambiente.
 
 Esse sensor envia os dados diretamente para o sistema da Raspberry Pi, onde eles ficam disponíveis como se fossem um arquivo interno. A aplicação em C# lê esse arquivo periodicamente, interpreta o valor da temperatura e exibe o resultado na tela.
