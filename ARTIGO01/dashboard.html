@@ -61,9 +61,7 @@
     backdrop-filter: blur(10px);
   }
 
-  .logo {
-    display: flex; align-items: center; gap: 14px;
-  }
+  .logo { display: flex; align-items: center; gap: 14px; }
 
   .logo-icon {
     width: 42px; height: 42px;
@@ -93,15 +91,11 @@
     letter-spacing: 1px;
   }
 
-  .header-right {
-    display: flex; align-items: center; gap: 24px;
-  }
+  .header-right { display: flex; align-items: center; gap: 24px; }
 
   .status-pill {
     display: flex; align-items: center; gap: 8px;
-    padding: 6px 16px;
-    border-radius: 20px;
-    border: 1px solid;
+    padding: 6px 16px; border-radius: 20px; border: 1px solid;
     font-size: 12px; font-weight: 600;
     letter-spacing: 1px; text-transform: uppercase;
     font-family: 'Rajdhani', sans-serif;
@@ -109,135 +103,87 @@
   }
 
   .status-pill.online {
-    border-color: var(--accent2);
-    color: var(--accent2);
-    background: rgba(0,255,157,0.08);
-    box-shadow: var(--glow2);
+    border-color: var(--accent2); color: var(--accent2);
+    background: rgba(0,255,157,0.08); box-shadow: var(--glow2);
   }
 
   .status-pill.alert {
-    border-color: var(--warn);
-    color: var(--warn);
-    background: rgba(255,204,0,0.08);
-    box-shadow: 0 0 20px rgba(255,204,0,0.4);
+    border-color: var(--warn); color: var(--warn);
+    background: rgba(255,204,0,0.08); box-shadow: 0 0 20px rgba(255,204,0,0.4);
   }
 
   .status-pill.danger {
-    border-color: var(--danger);
-    color: var(--danger);
-    background: rgba(255,45,85,0.08);
-    box-shadow: 0 0 20px rgba(255,45,85,0.4);
+    border-color: var(--danger); color: var(--danger);
+    background: rgba(255,45,85,0.08); box-shadow: 0 0 20px rgba(255,45,85,0.4);
     animation: danger-pulse 1s ease-in-out infinite;
   }
 
-  @keyframes danger-pulse {
-    0%,100% { opacity: 1; }
-    50%      { opacity: 0.6; }
-  }
+  @keyframes danger-pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.6; } }
 
   .dot {
     width: 8px; height: 8px; border-radius: 50%;
-    background: currentColor;
-    animation: blink 1.5s ease-in-out infinite;
+    background: currentColor; animation: blink 1.5s ease-in-out infinite;
   }
 
   @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.2} }
 
   .clock {
     font-family: 'Share Tech Mono', monospace;
-    font-size: 14px; color: var(--accent1);
-    letter-spacing: 2px;
+    font-size: 14px; color: var(--accent1); letter-spacing: 2px;
   }
 
   /* ── Controles ── */
   .controls-bar {
     position: relative; z-index: 10;
     display: flex; align-items: center; gap: 12px;
-    padding: 12px 32px;
-    border-bottom: 1px solid var(--border);
+    padding: 12px 32px; border-bottom: 1px solid var(--border);
     background: rgba(8,15,32,0.8);
   }
 
   .btn {
     display: flex; align-items: center; gap: 8px;
-    padding: 8px 18px;
-    border-radius: 6px;
-    border: 1px solid;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 13px; font-weight: 600;
+    padding: 8px 18px; border-radius: 6px; border: 1px solid;
+    font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600;
     letter-spacing: 1px; text-transform: uppercase;
-    cursor: pointer; transition: all 0.2s;
-    background: transparent;
+    cursor: pointer; transition: all 0.2s; background: transparent;
   }
 
-  .btn-primary {
-    border-color: var(--accent1); color: var(--accent1);
-  }
-  .btn-primary:hover {
-    background: rgba(0,212,255,0.12);
-    box-shadow: var(--glow1);
-  }
-  .btn-danger {
-    border-color: var(--danger); color: var(--danger);
-  }
-  .btn-danger:hover {
-    background: rgba(255,45,85,0.12);
-    box-shadow: 0 0 20px rgba(255,45,85,0.4);
-  }
-  .btn-success {
-    border-color: var(--accent2); color: var(--accent2);
-  }
-  .btn-success:hover {
-    background: rgba(0,255,157,0.12);
-    box-shadow: var(--glow2);
-  }
-
+  .btn-primary { border-color: var(--accent1); color: var(--accent1); }
+  .btn-primary:hover { background: rgba(0,212,255,0.12); box-shadow: var(--glow1); }
+  .btn-danger { border-color: var(--danger); color: var(--danger); }
+  .btn-danger:hover { background: rgba(255,45,85,0.12); box-shadow: 0 0 20px rgba(255,45,85,0.4); }
+  .btn-success { border-color: var(--accent2); color: var(--accent2); }
+  .btn-success:hover { background: rgba(0,255,157,0.12); box-shadow: var(--glow2); }
   .btn:disabled { opacity: 0.3; cursor: not-allowed; }
 
   .cycle-counter {
-    margin-left: auto;
-    font-family: 'Share Tech Mono', monospace;
+    margin-left: auto; font-family: 'Share Tech Mono', monospace;
     font-size: 13px; color: var(--text-dim);
   }
   .cycle-counter span { color: var(--accent1); }
 
   /* ── Layout principal ── */
   .main {
-    position: relative; z-index: 1;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 300px;
-    grid-template-rows: auto auto 1fr;
-    gap: 16px;
-    padding: 20px 32px;
-    max-width: 1600px; margin: 0 auto;
+    position: relative; z-index: 1; display: grid;
+    grid-template-columns: 1fr 1fr 1fr 300px; grid-template-rows: auto auto 1fr;
+    gap: 16px; padding: 20px 32px; max-width: 1600px; margin: 0 auto;
   }
 
   /* ── Cards de sensor ── */
   .sensor-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 20px;
-    position: relative;
-    overflow: hidden;
-    transition: border-color 0.4s, box-shadow 0.4s;
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 20px; position: relative;
+    overflow: hidden; transition: border-color 0.4s, box-shadow 0.4s;
   }
 
   .sensor-card::before {
-    content: '';
-    position: absolute; top: 0; left: 0; right: 0;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, var(--card-color), transparent);
-    opacity: 0.6;
+    content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+    background: linear-gradient(90deg, transparent, var(--card-color), transparent); opacity: 0.6;
   }
 
-  .sensor-card.alert-state {
-    border-color: var(--warn);
-    box-shadow: 0 0 25px rgba(255,204,0,0.2);
-  }
+  .sensor-card.alert-state { border-color: var(--warn); box-shadow: 0 0 25px rgba(255,204,0,0.2); }
   .sensor-card.danger-state {
-    border-color: var(--danger);
-    box-shadow: 0 0 25px rgba(255,45,85,0.25);
+    border-color: var(--danger); box-shadow: 0 0 25px rgba(255,45,85,0.25);
     animation: card-danger 1.5s ease-in-out infinite;
   }
   @keyframes card-danger {
@@ -245,27 +191,16 @@
     50%      { box-shadow: 0 0 45px rgba(255,45,85,0.5); }
   }
 
-  .card-header {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 16px;
-  }
-
+  .card-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; }
   .card-label {
-    display: flex; align-items: center; gap: 10px;
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 12px; font-weight: 600;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: var(--text-dim);
+    display: flex; align-items: center; gap: 10px; font-family: 'Rajdhani', sans-serif;
+    font-size: 12px; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim);
   }
-
   .card-icon { font-size: 18px; }
 
   .card-badge {
-    font-size: 10px; font-weight: 700;
-    padding: 3px 9px; border-radius: 20px;
-    font-family: 'Rajdhani', sans-serif;
-    letter-spacing: 1px; text-transform: uppercase;
-    border: 1px solid currentColor;
+    font-size: 10px; font-weight: 700; padding: 3px 9px; border-radius: 20px;
+    font-family: 'Rajdhani', sans-serif; letter-spacing: 1px; text-transform: uppercase; border: 1px solid currentColor;
   }
 
   .badge-ok     { color: var(--accent2); background: rgba(0,255,157,0.1); }
@@ -274,102 +209,43 @@
   .badge-info   { color: var(--accent1); background: rgba(0,212,255,0.1); }
 
   .card-value {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 52px; font-weight: 700;
-    line-height: 1; margin-bottom: 4px;
-    transition: color 0.4s;
+    font-family: 'Rajdhani', sans-serif; font-size: 52px; font-weight: 700;
+    line-height: 1; margin-bottom: 4px; transition: color 0.4s;
   }
-
-  .card-unit {
-    font-size: 16px; font-weight: 400;
-    color: var(--text-dim); margin-left: 4px;
-  }
-
-  .card-sub {
-    font-size: 11px; color: var(--text-dim);
-    font-family: 'Share Tech Mono', monospace;
-    margin-top: 8px;
-  }
+  .card-unit { font-size: 16px; font-weight: 400; color: var(--text-dim); margin-left: 4px; }
+  .card-sub { font-size: 11px; color: var(--text-dim); font-family: 'Share Tech Mono', monospace; margin-top: 8px; }
 
   /* Barra de progresso */
-  .progress-track {
-    height: 4px;
-    background: rgba(255,255,255,0.06);
-    border-radius: 2px;
-    margin-top: 14px;
-    overflow: hidden;
-  }
-  .progress-fill {
-    height: 100%;
-    border-radius: 2px;
-    transition: width 0.8s cubic-bezier(0.4,0,0.2,1), background 0.4s;
-  }
+  .progress-track { height: 4px; background: rgba(255,255,255,0.06); border-radius: 2px; margin-top: 14px; overflow: hidden; }
+  .progress-fill { height: 100%; border-radius: 2px; transition: width 0.8s cubic-bezier(0.4,0,0.2,1), background 0.4s; }
 
   /* ── Card de presença (especial) ── */
-  .presence-card {
-    display: flex; flex-direction: column;
-    align-items: center; justify-content: center;
-    text-align: center; gap: 12px;
-  }
-
+  .presence-card { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; gap: 12px; }
   .presence-ring {
-    width: 80px; height: 80px;
-    border-radius: 50%;
-    border: 3px solid;
-    display: flex; align-items: center; justify-content: center;
-    font-size: 32px;
-    transition: all 0.4s;
-    position: relative;
+    width: 80px; height: 80px; border-radius: 50%; border: 3px solid; display: flex;
+    align-items: center; justify-content: center; font-size: 32px; transition: all 0.4s; position: relative;
   }
-
   .presence-ring.active {
-    border-color: var(--warn);
-    box-shadow: 0 0 30px rgba(255,204,0,0.5), inset 0 0 20px rgba(255,204,0,0.1);
+    border-color: var(--warn); box-shadow: 0 0 30px rgba(255,204,0,0.5), inset 0 0 20px rgba(255,204,0,0.1);
     animation: ring-pulse 1s ease-in-out infinite;
   }
-  .presence-ring.inactive {
-    border-color: var(--text-dim);
-    box-shadow: none;
-  }
+  .presence-ring.inactive { border-color: var(--text-dim); box-shadow: none; }
 
   @keyframes ring-pulse {
     0%,100% { box-shadow: 0 0 30px rgba(255,204,0,0.5), inset 0 0 20px rgba(255,204,0,0.1); }
     50%      { box-shadow: 0 0 55px rgba(255,204,0,0.8), inset 0 0 30px rgba(255,204,0,0.2); }
   }
-
-  .presence-text {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 22px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-  }
+  .presence-text { font-family: 'Rajdhani', sans-serif; font-size: 22px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
 
   /* ── Linha de atuadores ── */
-  .actuators-row {
-    grid-column: 1 / 4;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 12px;
-  }
-
+  .actuators-row { grid-column: 1 / 4; display: grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
   .actuator-card {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
-    display: flex; align-items: center; gap: 12px;
-    transition: all 0.4s;
+    background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px; display: flex; align-items: center; gap: 12px; transition: all 0.4s;
   }
+  .actuator-card.on { border-color: var(--accent2); background: rgba(0,255,157,0.05); box-shadow: 0 0 15px rgba(0,255,157,0.15); }
 
-  .actuator-card.on {
-    border-color: var(--accent2);
-    background: rgba(0,255,157,0.05);
-    box-shadow: 0 0 15px rgba(0,255,157,0.15);
-  }
-
-  .act-led {
-    width: 14px; height: 14px; border-radius: 50%;
-    flex-shrink: 0; transition: all 0.4s;
-  }
+  .act-led { width: 14px; height: 14px; border-radius: 50%; flex-shrink: 0; transition: all 0.4s; }
   .act-led.off { background: var(--text-dim); box-shadow: none; }
   .act-led.on  { background: var(--accent2); box-shadow: 0 0 10px var(--accent2); animation: blink 1s infinite; }
   .act-led.warn { background: var(--warn); box-shadow: 0 0 10px var(--warn); animation: blink 0.6s infinite; }
@@ -377,106 +253,49 @@
 
   .act-info { flex: 1; min-width: 0; }
   .act-name {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 13px; font-weight: 600;
-    letter-spacing: 1px; text-transform: uppercase;
-    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+    font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600;
+    letter-spacing: 1px; text-transform: uppercase; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
   }
-  .act-pin {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px; color: var(--text-dim);
-  }
-  .act-status {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 11px; font-weight: 700;
-    letter-spacing: 1px;
-  }
+  .act-pin { font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); }
+  .act-status { font-family: 'Rajdhani', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 1px; }
 
   /* ── Log + IA (coluna direita) ── */
-  .side-panel {
-    grid-column: 4;
-    grid-row: 1 / 4;
-    display: flex; flex-direction: column; gap: 14px;
-  }
-
-  .panel-box {
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-  }
-
+  .side-panel { grid-column: 4; grid-row: 1 / 4; display: flex; flex-direction: column; gap: 14px; }
+  .panel-box { background: var(--panel); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; }
   .panel-title {
-    display: flex; align-items: center; gap: 8px;
-    padding: 12px 16px;
-    border-bottom: 1px solid var(--border);
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: var(--text-dim);
+    display: flex; align-items: center; gap: 8px; padding: 12px 16px; border-bottom: 1px solid var(--border);
+    font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim);
   }
 
-  /* IA panel */
   .ia-body { padding: 14px 16px; }
-
-  .risk-level {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 12px;
-  }
-
-  .risk-label {
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px; color: var(--text-dim);
-  }
-
+  .risk-level { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; }
+  .risk-label { font-family: 'Share Tech Mono', monospace; font-size: 11px; color: var(--text-dim); }
   .risk-badge {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 14px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    padding: 4px 12px; border-radius: 4px;
-    border: 1px solid currentColor;
-    transition: all 0.4s;
+    font-family: 'Rajdhani', sans-serif; font-size: 14px; font-weight: 700; letter-spacing: 2px;
+    text-transform: uppercase; padding: 4px 12px; border-radius: 4px; border: 1px solid currentColor; transition: all 0.4s;
   }
 
   .ml-row {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 8px 0;
-    border-top: 1px solid var(--border);
-    font-size: 11px;
+    display: flex; align-items: center; justify-content: space-between; padding: 8px 0;
+    border-top: 1px solid var(--border); font-size: 11px;
   }
   .ml-label { font-family: 'Share Tech Mono', monospace; color: var(--text-dim); }
   .ml-val   { font-family: 'Rajdhani', sans-serif; font-size: 13px; font-weight: 600; }
-
   .rules-list { margin-top: 10px; display: flex; flex-direction: column; gap: 6px; }
-
   .rule-item {
-    display: flex; align-items: flex-start; gap: 8px;
-    padding: 8px 10px;
-    border-radius: 6px;
-    background: rgba(255,255,255,0.03);
-    border-left: 2px solid;
-    font-size: 11px; line-height: 1.4;
-    font-family: 'Share Tech Mono', monospace;
-    animation: slide-in 0.3s ease;
+    display: flex; align-items: flex-start; gap: 8px; padding: 8px 10px; border-radius: 6px;
+    background: rgba(255,255,255,0.03); border-left: 2px solid; font-size: 11px; line-height: 1.4;
+    font-family: 'Share Tech Mono', monospace; animation: slide-in 0.3s ease;
   }
 
-  @keyframes slide-in {
-    from { opacity:0; transform: translateX(-10px); }
-    to   { opacity:1; transform: translateX(0); }
-  }
+  @keyframes slide-in { from { opacity:0; transform: translateX(-10px); } to { opacity:1; transform: translateX(0); } }
 
-  /* Log */
   .log-body {
-    height: 280px; overflow-y: auto;
-    padding: 10px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 11px; line-height: 1.7;
+    height: 280px; overflow-y: auto; padding: 10px; font-family: 'Share Tech Mono', monospace; font-size: 11px; line-height: 1.7;
   }
-
   .log-body::-webkit-scrollbar { width: 4px; }
   .log-body::-webkit-scrollbar-track { background: transparent; }
   .log-body::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
-
   .log-line { padding: 2px 4px; border-radius: 3px; margin-bottom: 1px; }
   .log-ok     { color: var(--accent2); }
   .log-warn   { color: var(--warn); background: rgba(255,204,0,0.05); }
@@ -484,74 +303,32 @@
   .log-info   { color: var(--accent1); }
   .log-dim    { color: var(--text-dim); }
 
-  /* ARM Panel */
   .arm-body {
-    padding: 12px 14px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px; line-height: 1.8;
-    max-height: 200px; overflow-y: auto;
+    padding: 12px 14px; font-family: 'Share Tech Mono', monospace; font-size: 10px; line-height: 1.8; max-height: 200px; overflow-y: auto;
   }
   .arm-body::-webkit-scrollbar { width: 3px; }
   .arm-body::-webkit-scrollbar-thumb { background: var(--border); }
-
   .arm-stage { display: flex; gap: 8px; }
   .arm-tag   { color: var(--accent1); min-width: 70px; }
   .arm-val   { color: var(--text); }
-
   .regs-grid {
-    display: grid; grid-template-columns: repeat(4,1fr); gap: 4px;
-    margin-top: 8px; padding-top: 8px;
-    border-top: 1px solid var(--border);
+    display: grid; grid-template-columns: repeat(4,1fr); gap: 4px; margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border);
   }
-
   .reg-cell {
-    background: rgba(0,212,255,0.05);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    padding: 3px 6px;
-    text-align: center;
+    background: rgba(0,212,255,0.05); border: 1px solid var(--border); border-radius: 4px; padding: 3px 6px; text-align: center;
   }
   .reg-name { color: var(--text-dim); font-size: 9px; }
   .reg-val  { color: var(--accent1);  font-size: 10px; font-weight: 600; }
 
-  /* ── Chart (histórico) ── */
-  .chart-row {
-    grid-column: 1 / 4;
-    background: var(--panel);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    padding: 16px 20px;
-  }
-
-  .chart-header {
-    display: flex; align-items: center; justify-content: space-between;
-    margin-bottom: 14px;
-  }
-
-  .chart-title {
-    font-family: 'Rajdhani', sans-serif;
-    font-size: 12px; font-weight: 700;
-    letter-spacing: 2px; text-transform: uppercase;
-    color: var(--text-dim);
-  }
-
-  .chart-legend {
-    display: flex; gap: 16px;
-  }
-
-  .legend-item {
-    display: flex; align-items: center; gap: 6px;
-    font-family: 'Share Tech Mono', monospace;
-    font-size: 10px; color: var(--text-dim);
-  }
-
-  .legend-dot {
-    width: 8px; height: 2px; border-radius: 1px;
-  }
-
+  /* ── Chart ── */
+  .chart-row { grid-column: 1 / 4; background: var(--panel); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; }
+  .chart-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 14px; }
+  .chart-title { font-family: 'Rajdhani', sans-serif; font-size: 12px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--text-dim); }
+  .chart-legend { display: flex; gap: 16px; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-family: 'Share Tech Mono', monospace; font-size: 10px; color: var(--text-dim); }
+  .legend-dot { width: 8px; height: 2px; border-radius: 1px; }
   canvas { width: 100% !important; }
 
-  /* ── Responsivo ── */
   @media (max-width: 1200px) {
     .main { grid-template-columns: 1fr 1fr 300px; }
     .actuators-row { grid-column: 1/3; grid-template-columns: repeat(3,1fr); }
@@ -563,7 +340,6 @@
 
 <div class="grid-bg"></div>
 
-<!-- HEADER -->
 <header>
   <div class="logo">
     <div class="logo-icon">🏠</div>
@@ -581,7 +357,6 @@
   </div>
 </header>
 
-<!-- CONTROLES -->
 <div class="controls-bar">
   <button class="btn btn-success" id="btnStart" onclick="startMonitor()">▶ INICIAR</button>
   <button class="btn btn-danger"  id="btnStop"  onclick="stopMonitor()" disabled>■ PARAR</button>
@@ -589,10 +364,7 @@
   <div class="cycle-counter">CICLO: <span id="cycleNum">0000</span></div>
 </div>
 
-<!-- MAIN GRID -->
 <div class="main">
-
-  <!-- TEMPERATURA -->
   <div class="sensor-card" id="cardTemp" style="--card-color: #ff6b35;">
     <div class="card-header">
       <div class="card-label"><span class="card-icon">🌡</span> Temperatura</div>
@@ -608,7 +380,6 @@
     </div>
   </div>
 
-  <!-- UMIDADE -->
   <div class="sensor-card" style="--card-color: #00d4ff;">
     <div class="card-header">
       <div class="card-label"><span class="card-icon">💧</span> Umidade</div>
@@ -624,7 +395,6 @@
     </div>
   </div>
 
-  <!-- GÁS -->
   <div class="sensor-card" id="cardGas" style="--card-color: #ff2d55;">
     <div class="card-header">
       <div class="card-label"><span class="card-icon">🔥</span> Gás / Fumaça</div>
@@ -640,10 +410,7 @@
     </div>
   </div>
 
-  <!-- PAINEL LATERAL -->
   <div class="side-panel">
-
-    <!-- IA -->
     <div class="panel-box">
       <div class="panel-title">🧠 <span>Análise IA</span></div>
       <div class="ia-body">
@@ -656,14 +423,11 @@
           <span class="ml-val" id="mlResult" style="color:var(--accent2);">✅ NORMAL</span>
         </div>
         <div class="rules-list" id="rulesList">
-          <div class="rule-item" style="border-color:var(--text-dim); color:var(--text-dim);">
-            Aguardando dados...
-          </div>
+          <div class="rule-item" style="border-color:var(--text-dim); color:var(--text-dim);">Aguardando dados...</div>
         </div>
       </div>
     </div>
 
-    <!-- ARM -->
     <div class="panel-box">
       <div class="panel-title">⚙️ <span>Pipeline ARM</span></div>
       <div class="arm-body" id="armBody">
@@ -671,17 +435,14 @@
       </div>
     </div>
 
-    <!-- Log -->
     <div class="panel-box" style="flex:1;">
       <div class="panel-title">📋 <span>Log Serial</span></div>
       <div class="log-body" id="logBody">
-        <div class="log-dim">// Sistema iniciado — aguardando...</div>
+        <div class="log-dim">// Sistema conectado ao Python — aguardando Início...</div>
       </div>
     </div>
-
   </div>
 
-  <!-- LUMINOSIDADE + PRESENÇA -->
   <div class="sensor-card" style="--card-color: #ffcc00;">
     <div class="card-header">
       <div class="card-label"><span class="card-icon">💡</span> Luminosidade</div>
@@ -707,51 +468,34 @@
     <div class="card-sub">Pino D3 · HC-SR501</div>
   </div>
 
-  <!-- ATUADORES -->
   <div class="actuators-row">
     <div class="actuator-card" id="act_buzzer">
       <div class="act-led off" id="led_buzzer"></div>
-      <div class="act-info">
-        <div class="act-name">Buzzer</div>
-        <div class="act-pin">Pino D8</div>
-      </div>
+      <div class="act-info"><div class="act-name">Buzzer</div><div class="act-pin">Pino D8</div></div>
       <div class="act-status" id="st_buzzer" style="color:var(--text-dim)">OFF</div>
     </div>
     <div class="actuator-card" id="act_alarme">
       <div class="act-led off" id="led_alarme"></div>
-      <div class="act-info">
-        <div class="act-name">LED Alarme</div>
-        <div class="act-pin">Pino D9</div>
-      </div>
+      <div class="act-info"><div class="act-name">LED Alarme</div><div class="act-pin">Pino D9</div></div>
       <div class="act-status" id="st_alarme" style="color:var(--text-dim)">OFF</div>
     </div>
     <div class="actuator-card" id="act_luz">
       <div class="act-led off" id="led_luz"></div>
-      <div class="act-info">
-        <div class="act-name">LED Luz</div>
-        <div class="act-pin">Pino D10</div>
-      </div>
+      <div class="act-info"><div class="act-name">LED Luz</div><div class="act-pin">Pino D10</div></div>
       <div class="act-status" id="st_luz" style="color:var(--text-dim)">OFF</div>
     </div>
     <div class="actuator-card" id="act_vent">
       <div class="act-led off" id="led_vent"></div>
-      <div class="act-info">
-        <div class="act-name">Ventilador</div>
-        <div class="act-pin">Pino D11</div>
-      </div>
+      <div class="act-info"><div class="act-name">Ventilador</div><div class="act-pin">Pino D11</div></div>
       <div class="act-status" id="st_vent" style="color:var(--text-dim)">OFF</div>
     </div>
     <div class="actuator-card" id="act_exaust">
       <div class="act-led off" id="led_exaust"></div>
-      <div class="act-info">
-        <div class="act-name">Exaustor</div>
-        <div class="act-pin">Pino D12</div>
-      </div>
+      <div class="act-info"><div class="act-name">Exaustor</div><div class="act-pin">Pino D12</div></div>
       <div class="act-status" id="st_exaust" style="color:var(--text-dim)">OFF</div>
     </div>
   </div>
 
-  <!-- GRÁFICO HISTÓRICO -->
   <div class="chart-row">
     <div class="chart-header">
       <div class="chart-title">📈 Histórico — Últimos 20 ciclos</div>
@@ -763,115 +507,33 @@
     </div>
     <canvas id="chartCanvas" height="80"></canvas>
   </div>
-
 </div>
 
 <script>
-// ─── Estado global ─────────────────────────────
 let cycle = 0;
 let running = false;
 let timer = null;
-
 const MAX_HIST = 20;
 const histTemp = [], histUmid = [], histGas = [];
 
-// ─── Relógio ────────────────────────────────────
 function updateClock() {
   const now = new Date();
-  document.getElementById('clock').textContent =
-    now.toLocaleTimeString('pt-BR');
+  document.getElementById('clock').textContent = now.toLocaleTimeString('pt-BR');
 }
 setInterval(updateClock, 1000); updateClock();
 
-// ─── Sensores simulados ─────────────────────────
-function gauss(mean, std) {
-  let u=0, v=0;
-  while(!u) u = Math.random();
-  while(!v) v = Math.random();
-  return mean + std * Math.sqrt(-2*Math.log(u)) * Math.cos(2*Math.PI*v);
-}
+const RISK_COLORS = { 'NORMAL':'var(--accent2)', 'BAIXO':'var(--accent1)', 'MÉDIO':'var(--warn)', 'ALTO':'var(--accent3)', 'CRÍTICO':'var(--danger)' };
 
-function readSensors() {
-  const hour = new Date().getHours();
-  const dayFactor = Math.max(0, Math.sin(Math.PI * (hour - 6) / 12));
-
-  return {
-    temperatura: Math.round(gauss(25, 3) * 10) / 10,
-    umidade:     Math.min(100, Math.max(0, Math.round(gauss(60, 8) * 10) / 10)),
-    presenca:    Math.random() < 0.20,
-    gas_ppm:     Math.max(0, Math.round(50 + Math.random() * 400)),
-    lux:         Math.max(0, Math.round(500 * dayFactor + (Math.random()-0.5)*100)),
-  };
-}
-
-// ─── Decisão de atuadores ───────────────────────
-function processDecision(s) {
-  return {
-    buzzer:  s.temperatura > 35 || s.gas_ppm > 300,
-    alarme:  s.presenca,
-    luz:     s.lux < 200,
-    vent:    s.temperatura > 35,
-    exaust:  s.gas_ppm > 300,
-  };
-}
-
-// ─── IA — regras ────────────────────────────────
-const RULES = [
-  { id:'R01', cond: s => s.temperatura > 40,                    risk:'CRÍTICO', msg:'Temperatura crítica — verificar incêndio' },
-  { id:'R02', cond: s => s.temperatura > 35 && s.temperatura <= 40, risk:'ALTO',    msg:'Temperatura alta — ventilador ligado' },
-  { id:'R03', cond: s => s.gas_ppm > 300,                       risk:'CRÍTICO', msg:'Gás perigoso — abrir exaustor' },
-  { id:'R04', cond: s => s.gas_ppm > 150 && s.gas_ppm <= 300,  risk:'MÉDIO',   msg:'Gás em atenção — monitorar' },
-  { id:'R05', cond: s => s.presenca && s.lux < 100,             risk:'ALTO',    msg:'Presença noturna — alarme ativo' },
-  { id:'R06', cond: s => s.presenca && s.lux >= 100,            risk:'BAIXO',   msg:'Presença detectada — registrado' },
-  { id:'R07', cond: s => s.umidade < 20,                        risk:'MÉDIO',   msg:'Umidade muito baixa' },
-];
-
-const RISK_ORDER = { 'NORMAL':0, 'BAIXO':1, 'MÉDIO':2, 'ALTO':3, 'CRÍTICO':4 };
-const RISK_COLORS = {
-  'NORMAL' : 'var(--accent2)',
-  'BAIXO'  : 'var(--accent1)',
-  'MÉDIO'  : 'var(--warn)',
-  'ALTO'   : 'var(--accent3)',
-  'CRÍTICO': 'var(--danger)',
-};
-
-function analyzeIA(s) {
-  const fired = RULES.filter(r => r.cond(s));
-  const topRisk = fired.reduce((best, r) =>
-    RISK_ORDER[r.risk] > RISK_ORDER[best] ? r.risk : best, 'NORMAL');
-  // Isolation Forest fake — anomalia se > 2 regras disparadas
-  const anomaly = fired.length >= 2;
-  return { fired, topRisk, anomaly };
-}
-
-// ─── ARM simulado ───────────────────────────────
-function runARM(temp, limiar) {
-  const regs = new Array(8).fill(0);
-  regs[0] = Math.round(temp);
-  regs[1] = limiar;
-  regs[2] = 0;
-  const z = regs[0] <= regs[1];
-  if (!z) { regs[2] = 1; regs[4] = regs[0] - regs[1]; }
-  regs[3] = regs[0] + regs[1];
-  regs[6] = 255;
-  return { regs, z };
-}
-
-// ─── Atualiza UI ────────────────────────────────
 function setActuator(id, on, color) {
   const card = document.getElementById('act_' + id);
   const led  = document.getElementById('led_' + id);
   const st   = document.getElementById('st_'  + id);
   if (on) {
-    card.classList.add('on');
-    led.className = 'act-led ' + (color || 'on');
-    st.textContent = 'ON';
-    st.style.color = color === 'danger' ? 'var(--danger)' : color === 'warn' ? 'var(--warn)' : 'var(--accent2)';
+    card.classList.add('on'); led.className = 'act-led ' + (color || 'on');
+    st.textContent = 'ON'; st.style.color = color === 'danger' ? 'var(--danger)' : color === 'warn' ? 'var(--warn)' : 'var(--accent2)';
   } else {
-    card.classList.remove('on');
-    led.className = 'act-led off';
-    st.textContent = 'OFF';
-    st.style.color = 'var(--text-dim)';
+    card.classList.remove('on'); led.className = 'act-led off';
+    st.textContent = 'OFF'; st.style.color = 'var(--text-dim)';
   }
 }
 
@@ -880,16 +542,9 @@ function updateSensorCard(id, val, unit, prog, maxV, badgeId, threshHigh, thresh
   const pct = Math.min(100, (val / maxV) * 100);
   document.getElementById('prog' + id).style.width = pct + '%';
   const badge = document.getElementById('badge' + id);
-  if (val >= threshCrit) {
-    badge.textContent = 'PERIGO';
-    badge.className = 'card-badge badge-danger';
-  } else if (val >= threshHigh) {
-    badge.textContent = 'ALERTA';
-    badge.className = 'card-badge badge-warn';
-  } else {
-    badge.textContent = 'NORMAL';
-    badge.className = 'card-badge badge-ok';
-  }
+  if (val >= threshCrit) { badge.textContent = 'PERIGO'; badge.className = 'card-badge badge-danger'; }
+  else if (val >= threshHigh) { badge.textContent = 'ALERTA'; badge.className = 'card-badge badge-warn'; }
+  else { badge.textContent = 'NORMAL'; badge.className = 'card-badge badge-ok'; }
 }
 
 function addLog(msg, type) {
@@ -898,200 +553,158 @@ function addLog(msg, type) {
   const div = document.createElement('div');
   div.className = 'log-line log-' + (type||'dim');
   div.textContent = `[${t}] ${msg}`;
-  log.appendChild(div);
-  log.scrollTop = log.scrollHeight;
+  log.appendChild(div); log.scrollTop = log.scrollHeight;
 }
 
-// ─── Canvas chart ────────────────────────────────
 function drawChart() {
   const canvas = document.getElementById('chartCanvas');
   const ctx = canvas.getContext('2d');
   const W = canvas.offsetWidth; const H = canvas.offsetHeight || 80;
-  canvas.width = W; canvas.height = H;
-  ctx.clearRect(0, 0, W, H);
-
+  canvas.width = W; canvas.height = H; ctx.clearRect(0, 0, W, H);
   if (histTemp.length < 2) return;
 
-  const n = histTemp.length;
-  const pad = 10;
-  const xStep = (W - 2*pad) / (MAX_HIST - 1);
-
+  const pad = 10; const xStep = (W - 2*pad) / (MAX_HIST - 1);
   function drawLine(data, color, scale) {
-    ctx.beginPath();
-    ctx.strokeStyle = color;
-    ctx.lineWidth = 2;
-    ctx.shadowColor = color;
-    ctx.shadowBlur = 6;
+    ctx.beginPath(); ctx.strokeStyle = color; ctx.lineWidth = 2;
+    ctx.shadowColor = color; ctx.shadowBlur = 6;
     for (let i = 0; i < data.length; i++) {
-      const x = pad + i * xStep;
-      const y = H - pad - ((data[i] * scale) / 100) * (H - 2*pad);
+      const x = pad + i * xStep; const y = H - pad - ((data[i] * scale) / 100) * (H - 2*pad);
       i === 0 ? ctx.moveTo(x, y) : ctx.lineTo(x, y);
     }
-    ctx.stroke();
-    ctx.shadowBlur = 0;
-
-    // Ponto final
-    const lx = pad + (data.length-1)*xStep;
-    const ly = H - pad - ((data[data.length-1]*scale)/100)*(H-2*pad);
-    ctx.beginPath();
-    ctx.arc(lx, ly, 3, 0, Math.PI*2);
-    ctx.fillStyle = color;
-    ctx.fill();
+    ctx.stroke(); ctx.shadowBlur = 0;
+    const lx = pad + (data.length-1)*xStep; const ly = H - pad - ((data[data.length-1]*scale)/100)*(H-2*pad);
+    ctx.beginPath(); ctx.arc(lx, ly, 3, 0, Math.PI*2); ctx.fillStyle = color; ctx.fill();
   }
 
-  // Grid lines
-  ctx.strokeStyle = 'rgba(13,32,64,0.8)';
-  ctx.lineWidth = 1;
+  ctx.strokeStyle = 'rgba(13,32,64,0.8)'; ctx.lineWidth = 1;
   for (let i = 0; i <= 4; i++) {
     const y = pad + (i / 4) * (H - 2*pad);
     ctx.beginPath(); ctx.moveTo(pad, y); ctx.lineTo(W-pad, y); ctx.stroke();
   }
 
-  drawLine(histTemp, 'rgba(255,107,53,0.9)', 2);    // temp /50 * 100
-  drawLine(histUmid, 'rgba(0,212,255,0.9)', 1);      // umid /100 * 100
-  drawLine(histGas.map(v=>v/10), 'rgba(255,45,85,0.9)', 1); // gas/1000*100
+  drawLine(histTemp, 'rgba(255,107,53,0.9)', 2);
+  drawLine(histUmid, 'rgba(0,212,255,0.9)', 1);
+  drawLine(histGas.map(v=>v/10), 'rgba(255,45,85,0.9)', 1);
 }
 
-// ─── Ciclo principal ────────────────────────────
-function tick() {
-  cycle++;
-  document.getElementById('cycleNum').textContent = String(cycle).padStart(4,'0');
+// INTEGRAÇÃO COM BACKEND PYTHON
+async function tick() {
+  if(!running) return;
+  
+  try {
+    const response = await fetch('/api/tick');
+    const data = await response.json();
+    
+    cycle++;
+    document.getElementById('cycleNum').textContent = String(cycle).padStart(4,'0');
 
-  const s = readSensors();
-  const act = processDecision(s);
-  const ia  = analyzeIA(s);
-  const arm = runARM(s.temperatura, 35);
+    const s = data.sensores;
+    const act = data.atuadores;
+    const ia = data.ia;
+    const arm = data.arm;
 
-  // Histórico para gráfico
-  histTemp.push(s.temperatura); if (histTemp.length > MAX_HIST) histTemp.shift();
-  histUmid.push(s.umidade);     if (histUmid.length > MAX_HIST) histUmid.shift();
-  histGas.push(s.gas_ppm);      if (histGas.length  > MAX_HIST) histGas.shift();
-  drawChart();
+    histTemp.push(s.temperatura); if (histTemp.length > MAX_HIST) histTemp.shift();
+    histUmid.push(s.umidade);     if (histUmid.length > MAX_HIST) histUmid.shift();
+    histGas.push(s.gas_ppm);      if (histGas.length  > MAX_HIST) histGas.shift();
+    drawChart();
 
-  // Sensores
-  updateSensorCard('Temp', s.temperatura.toFixed(1), '°C', 'progTemp', 50,  'badgeTemp', 35, 40);
-  updateSensorCard('Umid', s.umidade.toFixed(1),     '%',  'progUmid', 100, 'badgeUmid', 80, 95);
-  updateSensorCard('Gas',  s.gas_ppm,                'ppm','progGas',  500, 'badgeGas',  150, 300);
-  updateSensorCard('Lux',  s.lux,                    'lux','progLux',  1000,'badgeLux',  800, 950);
+    updateSensorCard('Temp', s.temperatura.toFixed(1), '°C', 'progTemp', 50,  'badgeTemp', 35, 40);
+    updateSensorCard('Umid', s.umidade.toFixed(1),     '%',  'progUmid', 100, 'badgeUmid', 80, 95);
+    updateSensorCard('Gas',  s.gas_ppm,                'ppm','progGas',  500, 'badgeGas',  150, 300);
+    updateSensorCard('Lux',  s.luminosidade_lux,       'lux','progLux',  1000,'badgeLux',  200, 100);
 
-  // Temperatura: cor dinâmica
-  const tempColor = s.temperatura > 40 ? 'var(--danger)' : s.temperatura > 35 ? 'var(--warn)' : 'var(--accent3)';
-  document.getElementById('valTemp').style.color = tempColor;
-  document.getElementById('cardTemp').className = 'sensor-card' +
-    (s.temperatura > 40 ? ' danger-state' : s.temperatura > 35 ? ' alert-state' : '');
-  document.getElementById('cardTemp').style.setProperty('--card-color', s.temperatura > 35 ? '#ff2d55' : '#ff6b35');
+    const tempColor = s.temperatura > 40 ? 'var(--danger)' : s.temperatura > 35 ? 'var(--warn)' : 'var(--accent3)';
+    document.getElementById('valTemp').style.color = tempColor;
+    document.getElementById('cardTemp').className = 'sensor-card' + (s.temperatura > 40 ? ' danger-state' : s.temperatura > 35 ? ' alert-state' : '');
+    document.getElementById('cardTemp').style.setProperty('--card-color', s.temperatura > 35 ? '#ff2d55' : '#ff6b35');
 
-  // Gás: cor dinâmica
-  const gasColor = s.gas_ppm > 300 ? 'var(--danger)' : s.gas_ppm > 150 ? 'var(--warn)' : 'var(--accent2)';
-  document.getElementById('valGas').style.color = gasColor;
-  document.getElementById('progGas').style.background = gasColor;
-  document.getElementById('cardGas').className = 'sensor-card' +
-    (s.gas_ppm > 300 ? ' danger-state' : s.gas_ppm > 150 ? ' alert-state' : '');
+    const gasColor = s.gas_ppm > 300 ? 'var(--danger)' : s.gas_ppm > 150 ? 'var(--warn)' : 'var(--accent2)';
+    document.getElementById('valGas').style.color = gasColor;
+    document.getElementById('progGas').style.background = gasColor;
+    document.getElementById('cardGas').className = 'sensor-card' + (s.gas_ppm > 300 ? ' danger-state' : s.gas_ppm > 150 ? ' alert-state' : '');
 
-  // Presença
-  const ring = document.getElementById('presRing');
-  const pt   = document.getElementById('presText');
-  const bp   = document.getElementById('badgePres');
-  if (s.presenca) {
-    ring.className = 'presence-ring active';
-    pt.textContent = 'DETECTADO'; pt.style.color = 'var(--warn)';
-    bp.textContent = 'ALERTA'; bp.className = 'card-badge badge-warn';
-    document.getElementById('cardPres').className = 'sensor-card presence-card alert-state';
-  } else {
-    ring.className = 'presence-ring inactive';
-    pt.textContent = 'LIVRE'; pt.style.color = 'var(--accent2)';
-    bp.textContent = 'LIVRE'; bp.className = 'card-badge badge-ok';
-    document.getElementById('cardPres').className = 'sensor-card presence-card';
-  }
+    const ring = document.getElementById('presRing'); const pt = document.getElementById('presText'); const bp = document.getElementById('badgePres');
+    if (s.presenca) {
+      ring.className = 'presence-ring active'; pt.textContent = 'DETECTADO'; pt.style.color = 'var(--warn)';
+      bp.textContent = 'ALERTA'; bp.className = 'card-badge badge-warn';
+      document.getElementById('cardPres').className = 'sensor-card presence-card alert-state';
+    } else {
+      ring.className = 'presence-ring inactive'; pt.textContent = 'LIVRE'; pt.style.color = 'var(--accent2)';
+      bp.textContent = 'LIVRE'; bp.className = 'card-badge badge-ok';
+      document.getElementById('cardPres').className = 'sensor-card presence-card';
+    }
 
-  // Atuadores
-  setActuator('buzzer', act.buzzer, act.buzzer ? 'danger' : '');
-  setActuator('alarme', act.alarme, act.alarme ? 'warn'   : '');
-  setActuator('luz',    act.luz,    act.luz    ? 'on'     : '');
-  setActuator('vent',   act.vent,   act.vent   ? 'warn'   : '');
-  setActuator('exaust', act.exaust, act.exaust ? 'danger' : '');
+    setActuator('buzzer', act.buzzer, act.buzzer ? 'danger' : '');
+    setActuator('alarme', act.led_alarme, act.led_alarme ? 'warn'   : '');
+    setActuator('luz',    act.led_luz,    act.led_luz    ? 'on'     : '');
+    setActuator('vent',   act.ventilador, act.ventilador   ? 'warn'   : '');
+    setActuator('exaust', act.exaustor, act.exaustor ? 'danger' : '');
 
-  // IA
-  const riskEl = document.getElementById('riskBadge');
-  const rc = RISK_COLORS[ia.topRisk] || 'var(--accent2)';
-  riskEl.textContent = ia.topRisk;
-  riskEl.style.color = rc; riskEl.style.borderColor = rc;
+    const riskEl = document.getElementById('riskBadge');
+    const rc = RISK_COLORS[ia.topRisk] || 'var(--accent2)';
+    riskEl.textContent = ia.topRisk; riskEl.style.color = rc; riskEl.style.borderColor = rc;
 
-  const mlEl = document.getElementById('mlResult');
-  mlEl.textContent = ia.anomaly ? '⚠ ANOMALIA' : '✅ NORMAL';
-  mlEl.style.color = ia.anomaly ? 'var(--danger)' : 'var(--accent2)';
+    const mlEl = document.getElementById('mlResult');
+    mlEl.textContent = ia.anomaly ? '⚠ ANOMALIA' : '✅ NORMAL';
+    mlEl.style.color = ia.anomaly ? 'var(--danger)' : 'var(--accent2)';
 
-  const rl = document.getElementById('rulesList');
-  rl.innerHTML = '';
-  if (ia.fired.length === 0) {
-    rl.innerHTML = '<div class="rule-item" style="border-color:var(--accent2);color:var(--accent2)">✅ Todos parâmetros normais</div>';
-  } else {
-    ia.fired.forEach(r => {
-      const c = RISK_COLORS[r.risk];
-      rl.innerHTML += `<div class="rule-item" style="border-color:${c};color:${c}">[${r.id}] ${r.msg}</div>`;
-    });
-  }
+    const rl = document.getElementById('rulesList');
+    rl.innerHTML = '';
+    if (ia.fired.length === 0) {
+      rl.innerHTML = '<div class="rule-item" style="border-color:var(--accent2);color:var(--accent2)">✅ Todos parâmetros normais</div>';
+    } else {
+      ia.fired.forEach(r => {
+        const c = RISK_COLORS[r.risk];
+        rl.innerHTML += `<div class="rule-item" style="border-color:${c};color:${c}">[${r.id}] ${r.msg}</div>`;
+      });
+    }
 
-  // Status geral
-  const pill = document.getElementById('statusPill');
-  const st   = document.getElementById('statusText');
-  if (ia.topRisk === 'CRÍTICO') {
-    pill.className = 'status-pill danger'; st.textContent = 'ALERTA CRÍTICO';
-  } else if (ia.topRisk === 'ALTO' || ia.topRisk === 'MÉDIO') {
-    pill.className = 'status-pill alert'; st.textContent = 'ATENÇÃO';
-  } else {
-    pill.className = 'status-pill online'; st.textContent = 'SISTEMA ONLINE';
-  }
+    const pill = document.getElementById('statusPill'); const stT = document.getElementById('statusText');
+    if (ia.topRisk === 'CRÍTICO') { pill.className = 'status-pill danger'; stT.textContent = 'ALERTA CRÍTICO'; }
+    else if (ia.topRisk === 'ALTO' || ia.topRisk === 'MÉDIO') { pill.className = 'status-pill alert'; stT.textContent = 'ATENÇÃO'; }
+    else { pill.className = 'status-pill online'; stT.textContent = 'SISTEMA ONLINE'; }
 
-  // ARM pipeline
-  const ab = document.getElementById('armBody');
-  ab.innerHTML = `
-    <div class="arm-stage"><span class="arm-tag">FETCH</span><span class="arm-val">CMP R0, R1 ; temp(${arm.regs[0]}) vs limiar(${arm.regs[1]})</span></div>
-    <div class="arm-stage"><span class="arm-tag">DECODE</span><span class="arm-val">opcode=CMP dest=-- op1=R0 op2=R1</span></div>
-    <div class="arm-stage"><span class="arm-tag">EXECUTE</span><span class="arm-val">R0-R1=${arm.regs[0]-arm.regs[1]} | Z=${arm.z?1:0} N=${arm.regs[0]<arm.regs[1]?1:0}</span></div>
-    <div class="arm-stage"><span class="arm-tag">BLE fim</span><span class="arm-val">${arm.z ? 'DESVIO → sem alarme' : 'SEM DESVIO → alarme=1'}</span></div>
-    <div class="regs-grid">
-      ${arm.regs.map((v,i)=>`<div class="reg-cell"><div class="reg-name">R${i}</div><div class="reg-val">${v}</div></div>`).join('')}
-    </div>
-  `;
+    const ab = document.getElementById('armBody');
+    ab.innerHTML = `
+      <div class="arm-stage"><span class="arm-tag">FETCH</span><span class="arm-val">${arm.fetch}</span></div>
+      <div class="arm-stage"><span class="arm-tag">STATUS</span><span class="arm-val">Z=${arm.z?1:0} N=${arm.n?1:0}</span></div>
+      <div class="regs-grid">
+        ${arm.regs.map((v,i)=>`<div class="reg-cell"><div class="reg-name">R${i}</div><div class="reg-val">${v}</div></div>`).join('')}
+      </div>
+    `;
 
-  // Log
-  const logType = ia.topRisk === 'CRÍTICO' ? 'danger' : ia.topRisk === 'ALTO' ? 'warn' : ia.fired.length > 0 ? 'warn' : 'ok';
-  addLog(`#${String(cycle).padStart(4,'0')} T=${s.temperatura}°C U=${s.umidade}% G=${s.gas_ppm}ppm L=${s.lux}lx P=${s.presenca?'SIM':'NÃO'}`, 'info');
-  if (ia.fired.length > 0) {
-    ia.fired.forEach(r => addLog(`  ⚠ [${r.id}] ${r.msg}`, logType));
-  } else {
-    addLog('  ✓ Parâmetros normais', 'ok');
+    const logType = ia.topRisk === 'CRÍTICO' ? 'danger' : ia.topRisk === 'ALTO' ? 'warn' : ia.fired.length > 0 ? 'warn' : 'ok';
+    addLog(`#${String(cycle).padStart(4,'0')} T=${s.temperatura}°C U=${s.umidade}% G=${s.gas_ppm}ppm L=${s.luminosidade_lux}lx P=${s.presenca?'SIM':'NÃO'}`, 'info');
+    if (ia.fired.length > 0) ia.fired.forEach(r => addLog(`  ⚠ [${r.id}] ${r.msg}`, logType));
+    else addLog('  ✓ Parâmetros normais', 'ok');
+    
+  } catch(e) {
+    console.error(e);
+    addLog('Erro ao conectar com Python. O Flask está rodando?', 'danger');
   }
 }
 
-// ─── Controles ──────────────────────────────────
 function startMonitor() {
   if (running) return;
   running = true;
   document.getElementById('btnStart').disabled = true;
   document.getElementById('btnStop').disabled  = false;
-  addLog('=== Monitor iniciado ===', 'info');
-  tick();
-  timer = setInterval(tick, 1500);
+  addLog('=== Monitor iniciado via Python ===', 'info');
+  tick(); timer = setInterval(tick, 1500);
 }
 
 function stopMonitor() {
-  running = false;
-  clearInterval(timer);
+  running = false; clearInterval(timer);
   document.getElementById('btnStart').disabled = false;
   document.getElementById('btnStop').disabled  = true;
   addLog('=== Monitor pausado ===', 'dim');
   const pill = document.getElementById('statusPill');
   const st   = document.getElementById('statusText');
   pill.className = 'status-pill'; st.textContent = 'PAUSADO';
-  pill.style.borderColor = 'var(--text-dim)';
-  pill.style.color = 'var(--text-dim)';
+  pill.style.borderColor = 'var(--text-dim)'; pill.style.color = 'var(--text-dim)';
 }
 
-function resetLog() {
-  document.getElementById('logBody').innerHTML = '<div class="log-dim">// Log limpo</div>';
-}
+function resetLog() { document.getElementById('logBody').innerHTML = '<div class="log-dim">// Log limpo</div>'; }
 </script>
 </body>
 </html>
