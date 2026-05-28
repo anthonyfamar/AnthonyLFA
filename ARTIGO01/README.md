@@ -122,25 +122,10 @@ O arquivo `simulador_arm.py` demonstra o ciclo clássico de um processador ARM:
 
 ---
 
-## 📋 Critérios de Avaliação Atendidos
-
-| Critério | Pontuação | Status |
-|---|---|---|
-| Desenvolvimento do Artigo | 2,0 | ✅ |
-| Funcionamento do Projeto | 3,0 | ✅ |
-| Programação em C (Python) | 2,0 | ✅ |
-| Uso de Arquitetura ARM | 1,5 | ✅ |
-| Organização no GitHub | 1,0 | ✅ |
-| Apresentação Final | 0,5 | 🔄 |
-
----
-
 ## 👨‍💻 Autor
 
 **Anthony Famar Gomes**  
 5º Semestre — Ciência da Computação  
-📧 Contato: [seu-email@exemplo.com]  
-🔗 GitHub: [github.com/seu-usuario]
 
 ---
 
