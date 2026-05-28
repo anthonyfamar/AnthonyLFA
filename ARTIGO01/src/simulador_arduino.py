@@ -15,7 +15,7 @@ from datetime import datetime
 # ─────────────────────────────────────────────
 #  Constantes (equivalente a #define no C/C++)
 # ─────────────────────────────────────────────
-TEMP_MAX        = 45.0   # °C — limiar de temperatura alta
+TEMP_MAX        = 29.0   # °C — limiar de temperatura alta
 UMIDADE_MIN     = 20.0   # %  — limiar de umidade baixa
 GAS_MAX         = 300    # ppm — limiar de gás perigoso
 LUZ_NOITE       = 200    # lux — abaixo disso acende luz automática
