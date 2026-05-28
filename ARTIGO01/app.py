@@ -70,14 +70,17 @@ def get_tick():
         "atuadores": estado_atuadores,
         "ia": {
             "topRisk": relatorio["nivel_risco"],
-            "anomaly": relatorio["anomalia_ml"]["anomalia"],
+            
+            # CONVERSÃO PARA EVITAR O ERRO DO JSON SERIALIZABLE
+            "anomaly": bool(relatorio["anomalia_ml"]["anomalia"]), 
+            
             "fired": regras_formatadas
         },
         "arm": {
             "fetch": instrucao_atual,
             "regs": cpu.regs[:8],
-            "z": cpu.flags.get("Z", False),
-            "n": cpu.flags.get("N", False)
+            "z": bool(cpu.flags.get("Z", False)),
+            "n": bool(cpu.flags.get("N", False))
         }
     })
 
